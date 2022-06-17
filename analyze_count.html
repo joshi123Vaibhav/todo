@@ -1,0 +1,135 @@
+<!--https://www.youtube.com/watch?v=oLgtucwjVII-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Text Analyzer : Responsive Navbar </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+        *{
+            padding :0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: monospace;
+            background-color: darkslategrey;
+            color: white;
+        }
+
+        nav {
+            background: linear-gradient(45deg, rgb(0, 0, 0), transparent);
+            height: 80px;
+            width: 100%;
+        }
+        
+        label.logo {
+            color: white;
+            font-size: 35px;
+            line-height: 80px;
+            font-weight: bold;
+            padding: 0 40px;
+        }
+
+        nav ul{
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        } 
+
+        nav ul li a{
+            color: white;
+            font-size: 17px;
+            text-transform: uppercase;
+            padding: 7px 13px;
+            border-radius: 4px;
+        }
+
+        nav ul li a.active, nav ul li a:hover{
+            background: #1b9bff;
+            transition: 0.5s;
+        }
+
+        .logo a {
+            color: white;
+            font-weight: bolder;
+        }
+
+        .container1{
+            padding: 4%;
+        }
+
+        textarea {
+            border-color: blu;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: darkslategrey;
+            padding: 1rem;
+        }
+        
+        input[type="checkbox"] {
+            margin-bottom: 1rem;
+        }
+
+
+        input[type="checkbox"]:hover {
+            cursor: pointer;
+        }
+
+        form {
+            font-size: 1rem;
+            color: beige;
+        }
+
+        button {
+            padding: 0.5rem;
+            background-color: slategray;
+            color: white;
+            font-weight: bold;
+            border: transparent;
+            border-radius: 13px;
+        }
+
+        
+        button:hover {
+            cursor: pointer;
+            background-color: rgb(86, 120, 153);
+            transition: 0.3s;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <label class="logo"> <a href="http://127.0.0.1:8000/"> textAnalyzer </a> </label> 
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+        <div class="container1">
+            <div class="container2">
+                <h1>Analyzed text is : </h1>
+                <pre>
+                    <p> {{analyzed_text}} </p>
+                </pre>
+                <h1>Number of charactors are : </h1>
+                <p>{{char_count}}</p>
+            </div> 
+        </div>
+    </body>
+
+</html>
